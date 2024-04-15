@@ -2,6 +2,7 @@ node_modules
 /.cache
 /build
 /dist
+/.idea
 /public/build
 /.mf
 .env
