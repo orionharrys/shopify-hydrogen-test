@@ -103,7 +103,7 @@ export function SearchResults({results, searchTerm}) {
 }
 
 /**
- * @param {Pick<SearchQuery, 'products'> & {searchTerm: string}}
+ * @param {Pick<SearchQuery, 'products._index'> & {searchTerm: string}}
  */
 function SearchResultsProductsGrid({products, searchTerm}) {
   return (
@@ -417,7 +417,7 @@ function usePredictiveSearch() {
  * @example
  * ```js
  * pluralToSingularSearchType('articles'); // => 'ARTICLE'
- * pluralToSingularSearchType(['articles', 'products']); // => 'ARTICLE,PRODUCT'
+ * pluralToSingularSearchType(['articles', 'products._index']); // => 'ARTICLE,PRODUCT'
  * ```
  * @param {| NormalizedPredictiveSearchResults[number]['type']
  *     | Array<NormalizedPredictiveSearchResults[number]['type']>} type
@@ -459,7 +459,7 @@ function pluralToSingularSearchType(type) {
 /**
  * @typedef {Array<
  *   | {type: 'queries'; items: Array<NormalizedPredictiveSearchResultItem>}
- *   | {type: 'products'; items: Array<NormalizedPredictiveSearchResultItem>}
+ *   | {type: 'products._index'; items: Array<NormalizedPredictiveSearchResultItem>}
  *   | {type: 'collections'; items: Array<NormalizedPredictiveSearchResultItem>}
  *   | {type: 'pages'; items: Array<NormalizedPredictiveSearchResultItem>}
  *   | {type: 'articles'; items: Array<NormalizedPredictiveSearchResultItem>}

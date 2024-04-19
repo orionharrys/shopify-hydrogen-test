@@ -57,7 +57,7 @@ export default function Collection() {
 }
 
 /**
- * @param {{products: ProductItemFragment[]}}
+ * @param {{products._index: ProductItemFragment[]}}
  */
 function ProductsGrid({products}) {
   return (
