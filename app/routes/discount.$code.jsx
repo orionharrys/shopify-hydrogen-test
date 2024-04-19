@@ -7,7 +7,7 @@ import {redirect} from '@shopify/remix-oxygen';
  * @example
  * Example path applying a discount and optional redirecting (defaults to the home page)
  * ```js
- * /discount/FREESHIPPING?redirect=/products
+ * /discount/FREESHIPPING?redirect=/products._index
  *
  * ```
  * @param {LoaderFunctionArgs}

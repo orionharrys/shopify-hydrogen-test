@@ -1,4 +1,5 @@
 import {redirect} from '@shopify/remix-oxygen';
+import {Outlet} from '@remix-run/react';
 
 export async function loader({params, context}) {
   const {lang, locale} = params;
@@ -9,5 +10,12 @@ export async function loader({params, context}) {
 }
 
 export default function Homepage() {
-  return <div className="home">Welcome to Orion's Razors</div>;
+  return (
+    <div>
+      <div className="home">Welcome to Orion's Razors</div>
+      <div>
+        <Outlet />
+      </div>
+    </div>
+  );
 }

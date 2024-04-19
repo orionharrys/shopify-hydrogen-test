@@ -15,7 +15,7 @@ export async function loader({params, context}) {
   return defer({recommendedProducts, locale});
 }
 
-export default function Products() {
+export default function _products() {
   const {recommendedProducts} = useLoaderData<typeof loader>();
 
   return (

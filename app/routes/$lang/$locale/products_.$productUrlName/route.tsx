@@ -2,7 +2,7 @@ import {defer, redirect} from '@shopify/remix-oxygen';
 import {Await, useLoaderData} from '@remix-run/react';
 import {Suspense} from 'react';
 import {Money} from '@shopify/hydrogen';
-import {RECOMMENDED_PRODUCTS_QUERY} from './$lang.$locale_.products';
+import {RECOMMENDED_PRODUCTS_QUERY} from '../products/_products';
 
 export async function loader({params, context}) {
   const {productUrlName} = params;

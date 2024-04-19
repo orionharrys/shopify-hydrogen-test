@@ -340,7 +340,7 @@ aside li {
 
 /*
 * --------------------------------------------------
-* routes/collections._index.tsx
+* routes/collections._products.tsx
 * --------------------------------------------------
 */
 .collections-grid {
@@ -381,7 +381,7 @@ aside li {
 
 /*
 * --------------------------------------------------
-* routes/products.$handle.tsx
+* routes/products._index.$handle.tsx
 * --------------------------------------------------
 */
 .product {
@@ -428,7 +428,7 @@ aside li {
 
 /*
 * --------------------------------------------------
-* routes/blog._index.tsx
+* routes/blog._products.tsx
 * --------------------------------------------------
 */
 .blog-grid {
