@@ -78,8 +78,6 @@ aside li {
 .home {
   display: flex;
   flex-direction: column;
-  grid-gap: 1rem;
-  padding: 1rem;
 }
 
 .overlay {
@@ -305,8 +303,6 @@ aside li {
   align-items: center;
   gap: 1rem;
 }
-
-
 
 /*
 * --------------------------------------------------
