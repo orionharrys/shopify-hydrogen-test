@@ -14,7 +14,12 @@ export async function loader({params, context}) {
 
   return defer(
     {recommendedProducts, locale},
-    {headers: {'Oxygen-Cache-Control': 'public, max-age=180'}},
+    {
+      headers: {
+        'Oxygen-Cache-Control': 'public, max-age=180',
+        'Cache-Control': 'public, max-age=180',
+      },
+    },
   );
 }
 
