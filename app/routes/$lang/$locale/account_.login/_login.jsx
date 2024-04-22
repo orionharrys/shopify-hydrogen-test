@@ -2,6 +2,7 @@
  * @param {LoaderFunctionArgs}
  */
 export async function loader({request, context}) {
+  console.log('how about here2');
   return context.customerAccount.login();
 }
 

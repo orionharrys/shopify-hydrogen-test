@@ -9,7 +9,7 @@ import {
   UPDATE_ADDRESS_MUTATION,
   DELETE_ADDRESS_MUTATION,
   CREATE_ADDRESS_MUTATION,
-} from '~/graphql/customer-account/CustomerAddressMutations';
+} from '~/graphql/customer-account/CustomerAddressMutations.js';
 
 /**
  * @type {MetaFunction}
@@ -562,8 +562,8 @@ export function AddressForm({addressId, address, defaultAddress, children}) {
  */
 
 /** @typedef {import('@shopify/hydrogen/customer-account-api-types').CustomerAddressInput} CustomerAddressInput */
-/** @typedef {import('customer-accountapi.generated').AddressFragment} AddressFragment */
-/** @typedef {import('customer-accountapi.generated').CustomerFragment} CustomerFragment */
+/** @typedef {import('../../../../../customer-accountapi.generated.js').AddressFragment} AddressFragment */
+/** @typedef {import('../../../../../customer-accountapi.generated.js').CustomerFragment} CustomerFragment */
 /** @typedef {import('@shopify/remix-oxygen').ActionFunctionArgs} ActionFunctionArgs */
 /** @typedef {import('@shopify/remix-oxygen').LoaderFunctionArgs} LoaderFunctionArgs */
 /** @template T @typedef {import('@remix-run/react').MetaFunction<T>} MetaFunction */

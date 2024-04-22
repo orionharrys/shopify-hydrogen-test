@@ -1,4 +1,4 @@
-import {CUSTOMER_UPDATE_MUTATION} from '~/graphql/customer-account/CustomerUpdateMutation';
+import {CUSTOMER_UPDATE_MUTATION} from '~/graphql/customer-account/CustomerUpdateMutation.js';
 import {json} from '@shopify/remix-oxygen';
 import {
   Form,
@@ -96,7 +96,7 @@ export async function action({request, context}) {
   }
 }
 
-export default function AccountProfile() {
+export default function Profile() {
   const account = useOutletContext();
   const {state} = useNavigation();
   /** @type {ActionReturnData} */
@@ -157,7 +157,7 @@ export default function AccountProfile() {
  * }} ActionResponse
  */
 
-/** @typedef {import('customer-accountapi.generated').CustomerFragment} CustomerFragment */
+/** @typedef {import('../../../../../customer-accountapi.generated.js').CustomerFragment} CustomerFragment */
 /** @typedef {import('@shopify/hydrogen/customer-account-api-types').CustomerUpdateInput} CustomerUpdateInput */
 /** @typedef {import('@shopify/remix-oxygen').ActionFunctionArgs} ActionFunctionArgs */
 /** @typedef {import('@shopify/remix-oxygen').LoaderFunctionArgs} LoaderFunctionArgs */

@@ -75,6 +75,13 @@ aside li {
   margin-bottom: 0.125rem;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.2);
   bottom: 0;

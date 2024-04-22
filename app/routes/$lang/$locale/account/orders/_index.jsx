@@ -6,7 +6,7 @@ import {
   flattenConnection,
 } from '@shopify/hydrogen';
 import {json} from '@shopify/remix-oxygen';
-import {CUSTOMER_ORDERS_QUERY} from '~/graphql/customer-account/CustomerOrdersQuery';
+import {CUSTOMER_ORDERS_QUERY} from '~/graphql/customer-account/CustomerOrdersQuery.js';
 
 /**
  * @type {MetaFunction}
@@ -124,6 +124,6 @@ function OrderItem({order}) {
 
 /** @template T @typedef {import('@remix-run/react').MetaFunction<T>} MetaFunction */
 /** @typedef {import('@shopify/remix-oxygen').LoaderFunctionArgs} LoaderFunctionArgs */
-/** @typedef {import('customer-accountapi.generated').CustomerOrdersFragment} CustomerOrdersFragment */
-/** @typedef {import('customer-accountapi.generated').OrderItemFragment} OrderItemFragment */
+/** @typedef {import('../../../../../../customer-accountapi.generated.js').CustomerOrdersFragment} CustomerOrdersFragment */
+/** @typedef {import('../../../../../../customer-accountapi.generated.js').OrderItemFragment} OrderItemFragment */
 /** @typedef {import('@shopify/remix-oxygen').SerializeFrom<typeof loader>} LoaderReturnData */
