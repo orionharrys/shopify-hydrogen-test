@@ -69,14 +69,6 @@ export async function loader({context}) {
   const isLoggedInPromise = customerAccount.isLoggedIn();
   const cartPromise = cart.get();
 
-  // defer the footer query (below the fold)
-  const footerPromise = storefront.query(FOOTER_QUERY, {
-    cache: storefront.CacheLong(),
-    variables: {
-      footerMenuHandle: 'footer', // Adjust to your footer menu handle
-    },
-  });
-
   // await the header query (above the fold)
   const headerPromise = storefront.query(HEADER_QUERY, {
     cache: storefront.CacheLong(),
@@ -88,7 +80,6 @@ export async function loader({context}) {
   return defer(
     {
       cart: cartPromise,
-      footer: footerPromise,
       header: await headerPromise,
       isLoggedIn: isLoggedInPromise,
       publicStoreDomain,
