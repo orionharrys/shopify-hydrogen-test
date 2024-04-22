@@ -18,6 +18,7 @@ export async function loader({params, context}) {
       headers: {
         'Oxygen-Cache-Control': 'public, max-age=180',
         'Cache-Control': 'public, max-age=180',
+        Vary: 'Accept-Language',
       },
     },
   );
