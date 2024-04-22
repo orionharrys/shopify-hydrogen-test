@@ -47,9 +47,9 @@ export default function Product() {
                   src={product.images.nodes[0].url}
                   alt={product.images.nodes[0].altText}
                 />
-                <p>
+                <div>
                   <Money data={product.priceRange.minVariantPrice} />
-                </p>
+                </div>
               </>
             );
           }}
