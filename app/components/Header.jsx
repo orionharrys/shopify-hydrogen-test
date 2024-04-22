@@ -95,7 +95,6 @@ function HeaderCtas({isLoggedIn, cart}) {
           </Await>
         </Suspense>
       </NavLink>
-      <SearchToggle />
       <CartToggle cart={cart} />
     </nav>
   );
@@ -107,10 +106,6 @@ function HeaderMenuMobileToggle() {
       <h3>☰</h3>
     </a>
   );
-}
-
-function SearchToggle() {
-  return <a href="#search-aside">Search</a>;
 }
 
 /**
