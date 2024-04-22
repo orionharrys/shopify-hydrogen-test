@@ -15,7 +15,10 @@ export async function loader({params, context}) {
   const {storefront} = context;
   const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
 
-  return defer({recommendedProducts, productTitle});
+  return defer(
+    {recommendedProducts, productTitle},
+    {headers: {'Oxygen-Cache-Control': 'public, max-age=180'}},
+  );
 }
 
 export default function Product() {
