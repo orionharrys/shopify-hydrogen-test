@@ -165,7 +165,7 @@ export function CartSummary({cost, layout, children = null}) {
 function CartLineRemoveButton({lineIds}) {
   return (
     <CartForm
-      route="/cart"
+      route="/en/us/cart"
       action={CartForm.ACTIONS.LinesRemove}
       inputs={{lineIds}}
     >
@@ -335,7 +335,7 @@ function UpdateDiscountForm({discountCodes, children}) {
 function CartLineUpdateButton({children, lines}) {
   return (
     <CartForm
-      route="/cart"
+      route="/en/us/cart"
       action={CartForm.ACTIONS.LinesUpdate}
       inputs={{lines}}
     >

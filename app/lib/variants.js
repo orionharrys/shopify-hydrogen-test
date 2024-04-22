@@ -32,7 +32,7 @@ export function getVariantUrl({
   searchParams,
   selectedOptions,
 }) {
-  const match = /(\/[a-zA-Z]{2}-[a-zA-Z]{2}\/)/g.exec(pathname);
+  const match = /(\/[a-zA-Z]{2}\/[a-zA-Z]{2}\/)/g.exec(pathname);
   const isLocalePathname = match && match.length > 0;
 
   const path = isLocalePathname

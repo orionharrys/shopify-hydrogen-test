@@ -11,8 +11,6 @@ export const meta = () => {
 };
 
 export async function loader({params, context}) {
-  console.log(params);
-
   return redirect('/en/us');
 }
 

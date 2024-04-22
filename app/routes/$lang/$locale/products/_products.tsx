@@ -6,9 +6,6 @@ import {Suspense} from 'react';
 export async function loader({params, context}) {
   const {lang, locale} = params;
 
-  if (lang !== 'en' || !['us', 'ca'].includes(locale))
-    return redirect('/en/us');
-
   const {storefront} = context;
   const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
 
@@ -48,7 +45,7 @@ function RecommendedProducts({products}) {
                 <Link
                   key={product.id}
                   className="recommended-product"
-                  to={`${product.title.toLowerCase().split(' ').join('-')}`}
+                  to={`${product.handle}`}
                 >
                   <Image
                     data={product.images.nodes[0]}

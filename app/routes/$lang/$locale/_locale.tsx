@@ -1,11 +1,7 @@
 import {redirect} from '@shopify/remix-oxygen';
 import {Outlet} from '@remix-run/react';
 
-export async function loader({params, context}) {
-  const {lang, locale} = params;
-  if (lang !== 'en' || !['us', 'ca'].includes(locale))
-    return redirect('/en/us');
-
+export async function loader() {
   return null;
 }
 
