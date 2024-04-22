@@ -77,19 +77,12 @@ export async function loader({context}) {
     },
   });
 
-  return defer(
-    {
-      cart: cartPromise,
-      header: await headerPromise,
-      isLoggedIn: isLoggedInPromise,
-      publicStoreDomain,
-    },
-    {
-      headers: {
-        'Set-Cookie': await context.session.commit(),
-      },
-    },
-  );
+  return defer({
+    cart: cartPromise,
+    header: await headerPromise,
+    isLoggedIn: isLoggedInPromise,
+    publicStoreDomain,
+  });
 }
 
 export default function App() {
